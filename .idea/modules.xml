@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AhmetHocaCanliDersler/AhmetHocaCanliDersler.iml" filepath="$PROJECT_DIR$/AhmetHocaCanliDersler/AhmetHocaCanliDersler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Team168_javaPractice/BabayigitHocaDersler.iml" filepath="$PROJECT_DIR$/Team168_javaPractice/BabayigitHocaDersler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaVideoDersler/JavaVideoDersler.iml" filepath="$PROJECT_DIR$/JavaVideoDersler/JavaVideoDersler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Mentoring/Mentoring.iml" filepath="$PROJECT_DIR$/Mentoring/Mentoring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.wisequarter.java.iml" filepath="$PROJECT_DIR$/com.wisequarter.java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/untitled/untitled.iml" filepath="$PROJECT_DIR$/untitled/untitled.iml" />
+    </modules>
+  </component>
+</project>
