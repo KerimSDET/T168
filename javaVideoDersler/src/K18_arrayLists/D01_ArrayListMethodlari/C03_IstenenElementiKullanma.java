@@ -1,6 +1,6 @@
 
 
-package K18_arrayLists;
+package K18_arrayLists.D01_ArrayListMethodlari;
 
 import java.util.ArrayList;
 import java.util.Arrays;

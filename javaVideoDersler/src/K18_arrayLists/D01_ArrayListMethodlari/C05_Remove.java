@@ -1,4 +1,4 @@
-package K18_arrayLists;
+package K18_arrayLists.D01_ArrayListMethodlari;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -47,7 +47,7 @@ public class C05_Remove {
 //        at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
 //        at java.base/java.util.Objects.checkIndex(Objects.java:385)
 //        at java.base/java.util.ArrayList.remove(ArrayList.java:551)
-//        at K18_arrayLists.C05_Remove.main(C05_Remove.java:39)
+
 
         /*
         Eğer list sayılardan oluşuyorsa
