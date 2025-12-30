@@ -10,6 +10,20 @@ public class C03_StaticBlocks {
     public static void main(String[] args) {
         System.out.println("Main method çalıştı");
 
+        C03_StaticBlocks obj = new C03_StaticBlocks();
+
+        C03_StaticBlocks obj2 = new C03_StaticBlocks();
+
+        method1();
+
+//        static block1 çalıştı
+//        static block2 çalıştı
+//        Main method çalıştı
+//        static olmayan kod blogu çalıştı
+//        Constructor çalıştı
+//        static olmayan kod blogu çalıştı
+//        Constructor çalıştı
+//        method çalıştı
 
 
     }
@@ -24,6 +38,10 @@ public class C03_StaticBlocks {
 
     static {
         System.out.println("static block2 çalıştı");
+    }
+
+    {
+        System.out.println("static olmayan kod blogu çalıştı");
     }
 
 
