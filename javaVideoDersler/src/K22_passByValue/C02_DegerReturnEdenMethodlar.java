@@ -22,11 +22,32 @@ public class C02_DegerReturnEdenMethodlar {
         String soyIsim=scanner.nextLine();
 
 
-
-
-
-
+        System.out.println(ismiDuzenle(isim,soyIsim));
 
 
     }
+
+    public static String ismiDuzenle (String isim, String soyisim){
+
+        isim = isim + " " + soyisim;
+
+        String[] isimlerArr = isim.split(" ");
+        String yeniIsim = "";
+
+        for (int i = 0; i < isimlerArr.length; i++) {
+
+            yeniIsim += (isimlerArr[i].substring(0,1).toUpperCase() +
+                    isimlerArr[i].substring(1).toLowerCase());
+
+            if (i<isimlerArr.length-1){
+                yeniIsim += " ";
+            }
+
+        }
+        return yeniIsim;
+
+
+    }
+
+
 }
