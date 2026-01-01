@@ -10,7 +10,7 @@ public class C03_StringPool {
         String str3 = new String("Ali"); // havuzda degil
         String str4 = "A" + "li"; // havuzda
         String s = "A"; // havuzda
-        String t = "li"; // havuzda
+        String t = "li"; // havuzdagit commit
         String str5 = s + t ; // havuzda degil
         String r = "ali"; // havuzda
         String str6 = r.substring(0,1).toUpperCase()+ r.substring(1); // havuzda degil
