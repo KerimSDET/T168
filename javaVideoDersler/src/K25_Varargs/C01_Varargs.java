@@ -1,4 +1,4 @@
-package K24_Varargs;
+package K25_Varargs;
 
 public class C01_Varargs {
 

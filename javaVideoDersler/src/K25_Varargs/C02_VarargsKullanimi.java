@@ -1,4 +1,4 @@
-package K24_Varargs;
+package K25_Varargs;
 
 public class C02_VarargsKullanimi {
     public static void main(String[] args) {
