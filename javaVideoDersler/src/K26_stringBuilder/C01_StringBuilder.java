@@ -36,7 +36,7 @@ public class C01_StringBuilder {
         sb3.append(" öğrenen pişman olmaz.");
         System.out.println("sb3 : "+sb3);
         System.out.println("sb3'ün uzunluğu :" +sb3.length());
-        System.out.println("sb3'ün kapasitesi : "+sb3.capacity());
+        System.out.println("sb3'ün kapasitesi : "+sb3.capacity()); //kapasite aşılırsa eski kapasite*2+2 olarak kapasite belirler.
 
 
 
