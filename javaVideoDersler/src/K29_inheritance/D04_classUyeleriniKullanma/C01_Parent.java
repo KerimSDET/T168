@@ -1,0 +1,15 @@
+package K29_inheritance.D04_classUyeleriniKullanma;
+
+public class C01_Parent {
+
+    String str = "Java candır";
+    String s = "Anıl";
+
+    public void method2(){
+        System.out.println("Parent method2");
+    }
+
+    public void method3(){
+        System.out.println("Parent method3");
+    }
+}
