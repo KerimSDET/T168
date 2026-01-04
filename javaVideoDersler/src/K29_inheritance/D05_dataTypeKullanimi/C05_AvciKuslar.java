@@ -48,6 +48,8 @@ public class C05_AvciKuslar extends C04_Kuslar{
         // avciKartal objesinin data turu esitligin sol tarafinda yazilan Class'dir ==> C05_AvciKuslar
         // Java'da bir obje data turu olarak Parent Class'lari da kullanabilir
 
+        System.out.println("Avcı Kartal C05_AvciKuslar data türünde : ");
+
         System.out.println(avciKartal.omur); // H yasar ve olurler
         System.out.println(avciKartal.solunum); // K akcigerle nefes alirlar
         System.out.println(avciKartal.cogalma); // K yumurtayla cogalirlar
@@ -59,6 +61,7 @@ public class C05_AvciKuslar extends C04_Kuslar{
 
         System.out.println("====================");
 
+        System.out.println("KusKartal C04_Kuslar data türünde : ");
         C04_Kuslar kusKartal = new C05_AvciKuslar();
         System.out.println(kusKartal.omur); // H yasar ve olurler
         System.out.println(kusKartal.solunum); // K akcigerle nefes alirlar
@@ -71,7 +74,7 @@ public class C05_AvciKuslar extends C04_Kuslar{
 
         System.out.println("====================");
 
-
+        System.out.println("hayvanKartal C03_Hayvanlar data türünde : ");
         C03_Hayvanlar hayvanKartal = new C05_AvciKuslar();
         System.out.println(hayvanKartal.omur); // H yasar ve olurler
         System.out.println(hayvanKartal.solunum); // H nefes alirlar
