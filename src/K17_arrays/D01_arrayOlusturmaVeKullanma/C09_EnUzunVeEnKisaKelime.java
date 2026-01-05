@@ -78,5 +78,7 @@ public class C09_EnUzunVeEnKisaKelime {
     }
 
 
+    public static void enKisaEnUzunKelimeYazdir(String[] kelimeler) {
 
+    }
 }
