@@ -1,9 +1,6 @@
-package K20_constructors.D01_constructorNedir_nicinKullanilir;
+package K20_Constructors.D01_constructorNedir_nicinKullanilir;
 
 public class C02_Okul {
-
-
-
 
 
 

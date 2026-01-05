@@ -1,4 +1,4 @@
-package K20_constructors.D01_constructorNedir_nicinKullanilir;
+package K20_Constructors.D01_constructorNedir_nicinKullanilir;
 
 public class C03_OkulRunner {
 
@@ -7,7 +7,7 @@ public class C03_OkulRunner {
 
         // C02_Okul class'indan bir obje olusturup, objeyi kullanalim
 
-        K20_constructors.D01_constructorNedir_nicinKullanilir.C02_Okul ogrenci1 = new K20_constructors.D01_constructorNedir_nicinKullanilir.C02_Okul();
+        C02_Okul ogrenci1 = new C02_Okul();
 
         System.out.println(ogrenci1.ogrIsim); // isim atanmamis
         ogrenci1.ogrIsim = "Ali";
@@ -42,7 +42,7 @@ public class C03_OkulRunner {
 
         System.out.println(new C02_Okul().ogrIsim); // isim atanmamis
 
-        new K20_constructors.D01_constructorNedir_nicinKullanilir.C02_Okul().ogrIsim = "Mehmet";
+        new C02_Okul().ogrIsim = "Mehmet";
 
 
         /*
