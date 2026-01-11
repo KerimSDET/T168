@@ -1,3 +1,5 @@
+package Methods;
+
 public class hello_world {
     static void main() {
         System.out.println("Hello World");
@@ -7,6 +9,8 @@ public class hello_world {
         System.out.println("Hello World");
 
         System.out.println("deneme");
+
+
     }
 
 
