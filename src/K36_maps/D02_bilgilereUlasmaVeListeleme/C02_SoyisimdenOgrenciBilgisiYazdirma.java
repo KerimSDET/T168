@@ -60,10 +60,5 @@ public class C02_SoyisimdenOgrenciBilgisiYazdirma extends OgrenciMap{
             System.out.println();
         }
 
-
-
-
-
-
     }
 }

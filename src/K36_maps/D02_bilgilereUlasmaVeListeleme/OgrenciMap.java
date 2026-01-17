@@ -1,15 +1,12 @@
 package K36_maps.D02_bilgilereUlasmaVeListeleme;
 
-import com.sun.security.jgss.GSSUtil;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+
+import java.util.*;
 
 public class OgrenciMap {
 
-    protected static Map<Integer,String> ogrenciMap = new HashMap<>();
+    public static Map<Integer,String> ogrenciMap = new HashMap<>();
 
     static {
         ogrenciMap.put(101,"Ali-Can-11-H-MF");
@@ -119,4 +116,167 @@ public class OgrenciMap {
         }
     }
 
+    public static void isimdenOgrenciListele(String verilenIsım) {
+        Set<Integer> ogrenciKeySet = ogrenciMap.keySet();
+
+
+        //            2- bir for-each loop ile her bir key'i ele alalim
+
+
+        System.out.println("Ismi " + verilenIsım + " olan öğrencilerin listesi");
+        for (Integer each : ogrenciKeySet) {
+            //            3- bizim oglanin getirdigi key'e ait value'yu kaydedelim
+            String eachValue = ogrenciMap.get(each);
+
+
+            //ogrenciKeyseti .forEach(System.out::println);
+
+
+            //            4- value'yu split ile bolup
+//               bir array olarak kaydedelim ki bilgilere direk ulasabilelim
+
+            String[] eachValueArr = eachValue.split("-");
+
+
+            //            5- kaydettigimiz valueArr'inde istenen bilgiyi kontrol edip
+//               istenen sarti saglayan ogrencilerin, istenen bilgilerini yazdirin
+
+            if (eachValueArr[0].equalsIgnoreCase(verilenIsım)) {
+                //numara sinif sube isim ve soyisimlerini yazdirin
+                System.out.println(
+                        each + " " +
+                                eachValueArr[2] + " " +
+                                eachValueArr[3] + " " +
+                                eachValueArr[0] + " " +
+                                eachValueArr[1]
+                );
+            }
+        }
+    }
+
+    public static void numaraIleSoyIsımUpdate (int verilenNo, String yeniSoyisim){
+        String verilenNoValue = ogrenciMap.get(verilenNo); //1- ogrencinin eski value'sunu kaydedelim.
+
+        String[] verilenNoArr = verilenNoValue.split("-");  //2- bilgilere rahat ulaşabilmek için value'yu split edelim
+
+        verilenNoArr[1] = yeniSoyisim;  //3- array üzerindeki istenen kontrolleri ve update i yapın ama arrayde
+
+        String verilenNoYeniValue = String.join("-", verilenNoArr); //arrayi yeniden - ile birlestirip yeniValue elde edelim
+
+        ogrenciMap.replace(verilenNo,verilenNoYeniValue); //key belli, yeniValue de oluşturuldu, ikisini kullanarak mapi update edelim
+    }
+
+    public static void kullanicidanAlinanBilgilerleOgrenciEkle (){
+
+        Scanner scanner =   new Scanner(System.in);
+
+        System.out.println("öğrenci no girin");
+        int ogrenciNo = scanner.nextInt();
+
+        String ogrenciValue ="";
+
+        scanner.nextLine();
+        System.out.println("Isim ?");
+        ogrenciValue+= scanner.nextLine();
+        ogrenciValue+="-";
+
+        System.out.println("Soyisim ?");
+        ogrenciValue+= scanner.nextLine();
+        ogrenciValue+="-";
+
+        System.out.println("sinif ?");
+        ogrenciValue+= scanner.nextLine();
+        ogrenciValue+="-";
+
+        System.out.println("sube ?");
+        ogrenciValue+= scanner.nextLine().toUpperCase();
+        ogrenciValue+="-";
+
+        System.out.println("bolum ?");
+        ogrenciValue+= scanner.nextLine().toUpperCase();
+        ogrenciValue+="-";
+
+        ogrenciMap.put(ogrenciNo,ogrenciValue);
+
+
+
+
+    }
+
+    public static void subeUpdate (Integer sinif, String eskiSube, String yeniSube){
+        Set<Integer> ogrenciKeySeti = ogrenciMap.keySet();
+
+        //bir for each loop ile her bir key'i ele alalım
+
+        for (Integer key : ogrenciKeySeti) {
+
+            //bizim oglanin getirdiği key'e ait value'yu kaydedelim
+
+            String eachValue = ogrenciMap.get(key);
+
+            //Value'yu split ile bolup
+            //bir array olarka kaydedelim ki bilgilere direk ulaşabilelim
+
+            String[] eachValueArr = eachValue.split("-");
+
+            //kaydettiğimiz valueArr'sinde istenen bilgiyi kontrol edip
+            //istenen şartı sağlayan ogrencilerin istenen bilgilerini update edip
+            //10 K sinifindaki ogrencikerin subesini Z yapalim
+
+            if (eachValueArr[2].equalsIgnoreCase(sinif+"") && eachValueArr[3].equalsIgnoreCase(eskiSube)) {
+                eachValueArr[3] = yeniSube;
+            }
+
+            //bu değişiklik arrayde yapıldı bunu mape yüklemek için birleştirme yap
+
+            String yeniValue = String.join("-", eachValueArr);
+
+            //key ve yeniValue değeerini mape update edelim
+
+            ogrenciMap.put(key,yeniValue);
+
+        }
+    }
+
+    public static void bolumUpdate (String eskiBolum, String yeniBolum){
+
+        Set<Integer> ogrenciKeySeti = ogrenciMap.keySet();
+
+        //bir for each loop ile her bir key'i ele alalım
+
+        for (Integer key : ogrenciKeySeti) {
+
+            //bizim oglanin getirdiği key'e ait value'yu kaydedelim
+
+            String eachValue = ogrenciMap.get(key);
+
+            //Value'yu split ile bolup
+            //bir array olarka kaydedelim ki bilgilere direk ulaşabilelim
+
+            String[] eachValueArr = eachValue.split("-");
+
+            //kaydettiğimiz valueArr'sinde istenen bilgiyi kontrol edip
+            //istenen şartı sağlayan ogrencilerin istenen bilgilerini update edip
+            //10 K sinifindaki ogrencikerin subesini Z yapalim
+
+           if (eachValueArr[4].equalsIgnoreCase(eachValue)){
+               eachValueArr[4] = yeniBolum;
+           }
+
+            //bu değişiklik arrayde yapıldı bunu mape yüklemek için birleştirme yap
+
+            String yeniValue = String.join("-", eachValueArr);
+
+            //key ve yeniValue değeerini mape update edelim
+
+            ogrenciMap.put(key,yeniValue);
+
+        }
+    }
+
+
+
 }
+
+
+

@@ -40,6 +40,9 @@ public class C05_MethodlariKullanma {
 
         OgrenciMap.sinifSubeListesiYazdirma(10,"K");
 
+        OgrenciMap.isimdenOgrenciListele("Ali");
+        OgrenciMap.isimdenOgrenciListele("Veli");
+
 
 
     }
