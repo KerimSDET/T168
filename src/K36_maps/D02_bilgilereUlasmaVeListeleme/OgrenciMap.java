@@ -259,7 +259,7 @@ public class OgrenciMap {
             //istenen şartı sağlayan ogrencilerin istenen bilgilerini update edip
             //10 K sinifindaki ogrencikerin subesini Z yapalim
 
-           if (eachValueArr[4].equalsIgnoreCase(eachValue)){
+           if (eachValueArr[4].equalsIgnoreCase(eskiBolum)){
                eachValueArr[4] = yeniBolum;
            }
 
@@ -274,7 +274,56 @@ public class OgrenciMap {
         }
     }
 
+    public static void yilSonuSinifArtirma () {
+        Set<Integer> ogrenciKeySeti = ogrenciMap.keySet();
 
+        //bir for each loop ile her bir key'i ele alalım
+
+        for (Integer key : ogrenciKeySeti) {
+
+            //bizim oglanin getirdiği key'e ait value'yu kaydedelim
+
+            String eachValue = ogrenciMap.get(key);
+
+            //Value'yu split ile bolup
+            //bir array olarka kaydedelim ki bilgilere direk ulaşabilelim
+
+            String[] eachValueArr = eachValue.split("-");
+
+            //kaydettiğimiz valueArr'sinde istenen bilgiyi kontrol edip
+            //istenen şartı sağlayan ogrencilerin istenen bilgilerini update edip
+            //10 K sinifindaki ogrencikerin subesini Z yapalim
+
+            String eskiSinif = eachValueArr[2];
+
+            //bir switch oluşturuyoruz
+            switch (eskiSinif) {
+                case "9":
+                    eachValueArr[2] = "10";
+                    break;
+                case "10":
+                    eachValueArr[2] = "11";
+                    break;
+                case "11":
+                    eachValueArr[2] = "12";
+                    break;
+                case "12":
+                    eachValueArr[2] = "Mezun";
+
+
+            }
+
+
+            //bu değişiklik arrayde yapıldı bunu mape yüklemek için birleştirme yap
+
+            String yeniValue = String.join("-", eachValueArr);
+
+            //key ve yeniValue değeerini mape update edelim
+
+            ogrenciMap.put(key, yeniValue);
+        }
+
+    }
 
 }
 
